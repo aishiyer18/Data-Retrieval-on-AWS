@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Python Flask Application</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheets/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted"><left>Welcome {{username}}</left></h3>
+      </div>
+      <hr/>
+      <div>
+
+      <div>
+        <form action="logout" method="post">
+          <center> 
+            <input type="submit" value="Logout"><br/><br/>
+          </center>
+        </form>
+      </div>
+      
+	  <hr>
+	  <div class="header">
+        <h3 class="text-muted"><center>Upload a File</center></h3>
+      </div>
+	  <hr>
+      
+	  <div>      
+      <form name="upload" action="upload" method="post" enctype="multipart/form-data">
+        <center>
+		<input type="file" name="file">
+        <input type="submit" value="Upload"></br></br>
+		</center>
+      </form>
+      </div>
+
+	  <hr>
+	  <div class="header">
+        <h3 class="text-muted"><center>Enter Query</center></h3>
+      </div>
+	  <hr>
+	  
+	  <form action="execute" method="post">
+		<center>
+		<textarea name= 'my_query' rows='5' cols='50'></textarea></br></br>
+		<center>
+		Enter a Key : <input type="text" name="key"><br /><br />
+		<input type="submit" value="Execute"></br></br>
+		</center>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
